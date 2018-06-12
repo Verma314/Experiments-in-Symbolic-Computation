@@ -29,3 +29,10 @@ print ( dsolve( Eq( y(t).diff(t,t) - y(t), exp(t) ), y(t) ) )
 
 print("\n Finding EigenValues:")
 print ( Matrix( [ [1,2],[2,2] ] ).eigenvals() )
+
+#to check mathematical equality, between two expressions say a and b
+# if simplify(a-b) evaluates to 0 => a = b
+x = symbols('x')
+a = (x+1)**2
+b = x**2 + 2*x + 1
+print ( simplify (a-b) )
